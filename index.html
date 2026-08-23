@@ -991,6 +991,26 @@ html&gt;body{padding:0}&lt;/style&gt;
       #pas-store .pas-system-flow { flex-wrap:wrap; justify-content:center; }
       #pas-store .pas-footer { grid-template-columns:1fr; }
     }
+
+    #pas-store .pas-hero-cn { display:block; margin-top:9px; color:#ffb84d; font-size:clamp(20px,2.2vw,31px); line-height:1.2; }
+    #pas-store .pas-taxonomy { background:light-dark(#f3f4f5,#202529); }
+    #pas-store .pas-taxonomy-head { display:flex; justify-content:space-between; gap:20px; align-items:end; margin-bottom:18px; }
+    #pas-store .pas-eyebrow { color:#ff9900; font-size:12px; font-weight:800; letter-spacing:.12em; }
+    #pas-store .pas-expand-all { border:1px solid light-dark(#9aa0a6,#596168); border-radius:999px; background:transparent; color:inherit; padding:9px 14px; cursor:pointer; white-space:nowrap; }
+    #pas-store .pas-taxonomy-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    #pas-store .pas-taxonomy details { border:1px solid light-dark(#d5d9d9,#444c51); border-radius:10px; background:light-dark(#fff,#292e32); overflow:hidden; }
+    #pas-store .pas-taxonomy details[open] { grid-column:1/-1; border-color:#ff9900; }
+    #pas-store .pas-taxonomy summary { display:flex; gap:14px; align-items:center; padding:17px 18px; cursor:pointer; font-weight:750; list-style:none; }
+    #pas-store .pas-taxonomy summary::-webkit-details-marker { display:none; }
+    #pas-store .pas-taxonomy summary::after { content:&#x27;+&#x27;; margin-left:auto; color:#ff9900; font-size:22px; }
+    #pas-store .pas-taxonomy details[open] summary::after { content:&#x27;–&#x27;; }
+    #pas-store .pas-taxonomy summary small, #pas-store .pas-branch strong small { display:block; margin-top:3px; color:light-dark(#667078,#b5bec5); font-size:12px; font-weight:500; }
+    #pas-store .pas-index { display:grid; place-items:center; flex:0 0 35px; height:35px; border-radius:50%; background:#232f3e; color:#ffb84d; font-size:12px; }
+    #pas-store .pas-tree { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; padding:0 18px 18px; }
+    #pas-store .pas-branch { border-left:3px solid #ff9900; background:light-dark(#f7f8f8,#202529); padding:13px 14px; }
+    #pas-store .pas-branch ul { display:flex; flex-wrap:wrap; gap:7px; margin:10px 0 0; padding:0; list-style:none; }
+    #pas-store .pas-branch li { border:1px solid light-dark(#d5d9d9,#4d565d); border-radius:999px; padding:6px 9px; font-size:12px; line-height:1.25; background:light-dark(#fff,#2c3237); }
+    @media (max-width:760px){#pas-store .pas-taxonomy-grid,#pas-store .pas-tree{grid-template-columns:1fr}#pas-store .pas-taxonomy details[open]{grid-column:auto}#pas-store .pas-taxonomy-head{align-items:start;flex-direction:column}}
   &lt;/style&gt;
 
   &lt;div class=&quot;pas-marketbar&quot;&gt;
@@ -1006,23 +1026,24 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;/header&gt;
 
   &lt;nav class=&quot;pas-tabs&quot; aria-label=&quot;Store navigation&quot;&gt;
-    &lt;button type=&quot;button&quot; data-view=&quot;home&quot; aria-selected=&quot;true&quot;&gt;Home&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-view=&quot;wiring&quot; aria-selected=&quot;false&quot;&gt;Wiring Kits&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-view=&quot;amplifiers&quot; aria-selected=&quot;false&quot;&gt;Amplifiers&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-view=&quot;speakers&quot; aria-selected=&quot;false&quot;&gt;Speakers&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-view=&quot;power&quot; aria-selected=&quot;false&quot;&gt;Power &amp;amp; Ground&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-view=&quot;signal&quot; aria-selected=&quot;false&quot;&gt;Signal &amp;amp; Speaker&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-view=&quot;protection&quot; aria-selected=&quot;false&quot;&gt;Fuses &amp;amp; Protection&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-view=&quot;installation&quot; aria-selected=&quot;false&quot;&gt;Installation&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-view=&quot;builder&quot; aria-selected=&quot;false&quot;&gt;Build Your System&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;home&quot; aria-selected=&quot;true&quot;&gt;Home / 首页&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;systempower&quot; aria-selected=&quot;false&quot;&gt;Shop by Power / 按功率&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;wiring&quot; aria-selected=&quot;false&quot;&gt;Amp Wiring Kits / 功放套装&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;power&quot; aria-selected=&quot;false&quot;&gt;Power &amp;amp; Ground / 电源接地&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;signal&quot; aria-selected=&quot;false&quot;&gt;Signal &amp;amp; Speaker / 信号扬声器&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;protection&quot; aria-selected=&quot;false&quot;&gt;Fuses &amp;amp; Protection / 电路保护&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;installation&quot; aria-selected=&quot;false&quot;&gt;Terminals &amp;amp; Installation / 端子安装&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;builder&quot; aria-selected=&quot;false&quot;&gt;Build Your System / 搭建系统&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;learn&quot; aria-selected=&quot;false&quot;&gt;Learn &amp;amp; Choose / 选购指南&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;performance&quot; aria-selected=&quot;false&quot;&gt;Performance Audio / 高性能音响&lt;/button&gt;
   &lt;/nav&gt;
 
   &lt;main class=&quot;pas-content&quot;&gt;
     &lt;div class=&quot;pas-toast&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
     &lt;section class=&quot;pas-hero&quot; data-home-only&gt;
       &lt;div class=&quot;pas-hero-copy&quot;&gt;
-        &lt;h1&gt;Complete power.&lt;br&gt;Clean signal.&lt;br&gt;Reliable installation.&lt;/h1&gt;
-        &lt;p&gt;Car-audio wiring and installation components engineered for everyday amplifier upgrades and high-output multi-amplifier systems.&lt;/p&gt;
+        &lt;h1&gt;Complete Your Car Audio Installation&lt;br&gt;&lt;span class=&quot;pas-hero-cn&quot;&gt;完整你的汽车音响安装系统&lt;/span&gt;&lt;/h1&gt;
+        &lt;p&gt;Shop a complete installation architecture by system power, wiring kit, power delivery, signal connection and protection. / 按系统功率、线材套装、供电、信号与保护选购完整安装系统。&lt;/p&gt;
         &lt;div class=&quot;pas-hero-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;pas-primary&quot; data-jump=&quot;products&quot;&gt;Shop wiring kits&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;pas-secondary&quot; data-jump=&quot;builder&quot;&gt;Find your wire gauge&lt;/button&gt;&lt;/div&gt;
       &lt;/div&gt;
       &lt;div class=&quot;pas-hero-art&quot; aria-label=&quot;Complete amplifier wiring kit product image&quot;&gt;&lt;img class=&quot;pas-hero-product&quot; src=&quot;&quot; data-product-image=&quot;wiring&quot; alt=&quot;Complete car audio amplifier wiring kit arranged as a studio flat lay&quot;&gt;&lt;/div&gt;
@@ -1036,15 +1057,37 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;div class=&quot;pas-products&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
     &lt;/section&gt;
 
-    &lt;section class=&quot;pas-section&quot; data-home-only&gt;
-      &lt;h2&gt;Everything between the battery and the amplifier&lt;/h2&gt;&lt;p class=&quot;pas-lead&quot;&gt;A complete installation ecosystem—not just three sizes of cable.&lt;/p&gt;
-      &lt;div class=&quot;pas-categories&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;pas-category&quot; data-open=&quot;wiring&quot;&gt;&lt;i data-lucide=&quot;cable&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong&gt;Amp wiring kits&lt;/strong&gt;&lt;span&gt;Power-only, complete, multi-channel and dual-amp configurations.&lt;/span&gt;&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;pas-category&quot; data-open=&quot;amplifiers&quot;&gt;&lt;i data-lucide=&quot;radio-tower&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong&gt;Performance amplifiers&lt;/strong&gt;&lt;span&gt;Monoblock and multi-channel anchor products matched to installation kits.&lt;/span&gt;&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;pas-category&quot; data-open=&quot;speakers&quot;&gt;&lt;i data-lucide=&quot;speaker&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong&gt;Car speakers&lt;/strong&gt;&lt;span&gt;Coaxial and component audio products for the developing system range.&lt;/span&gt;&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;pas-category&quot; data-open=&quot;power&quot;&gt;&lt;i data-lucide=&quot;battery-charging&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong&gt;Power &amp;amp; ground&lt;/strong&gt;&lt;span&gt;Bulk wire, Big 3 upgrades, battery terminals and distribution.&lt;/span&gt;&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;pas-category&quot; data-open=&quot;signal&quot;&gt;&lt;i data-lucide=&quot;audio-lines&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong&gt;Signal &amp;amp; speaker&lt;/strong&gt;&lt;span&gt;RCA interconnects, speaker wire and remote turn-on wire.&lt;/span&gt;&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;pas-category&quot; data-open=&quot;protection&quot;&gt;&lt;i data-lucide=&quot;shield-check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong&gt;System protection&lt;/strong&gt;&lt;span&gt;ANL and Mini-ANL fuse holders, fuses and circuit protection.&lt;/span&gt;&lt;/button&gt;
+    &lt;section class=&quot;pas-section pas-taxonomy&quot; id=&quot;pas-taxonomy&quot;&gt;
+      &lt;div class=&quot;pas-taxonomy-head&quot;&gt;&lt;div&gt;&lt;span class=&quot;pas-eyebrow&quot;&gt;HOME / 首页&lt;/span&gt;&lt;h2&gt;Complete Your Car Audio Installation&lt;/h2&gt;&lt;p class=&quot;pas-lead&quot;&gt;完整你的汽车音响安装系统 · Expand a category to explore the complete product architecture.&lt;/p&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;pas-expand-all&quot;&gt;Expand all / 全部展开&lt;/button&gt;&lt;/div&gt;
+      &lt;div class=&quot;pas-taxonomy-grid&quot;&gt;
+        &lt;details data-tax-view=&quot;systempower&quot; open&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;01&lt;/span&gt;&lt;span&gt;Shop by System Power&lt;small&gt;按系统功率选购&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Up to 600W RMS&lt;small&gt;最高 600W RMS&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;8 Gauge Complete Amp Kits / 8 AWG 完整功放安装套装&lt;/li&gt;&lt;li&gt;8 Gauge Power Kits / 8 AWG 电源安装套装&lt;/li&gt;&lt;li&gt;2-Channel Kits / 2 声道安装套装&lt;/li&gt;&lt;li&gt;Compact RCA Cables / 紧凑型 RCA 信号线&lt;/li&gt;&lt;li&gt;Mini-ANL Fuse &amp;amp; Accessories / Mini-ANL 保险丝及配件&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;600–1,500W RMS&lt;small&gt;600–1,500W RMS&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;4 Gauge Complete Amp Kits / 4 AWG 完整功放安装套装&lt;/li&gt;&lt;li&gt;4 Gauge Power Kits / 4 AWG 电源安装套装&lt;/li&gt;&lt;li&gt;2-Channel Kits / 2 声道安装套装&lt;/li&gt;&lt;li&gt;4-Channel Kits / 4 声道安装套装&lt;/li&gt;&lt;li&gt;RCA &amp;amp; Speaker Wire / RCA 信号线及喇叭线&lt;/li&gt;&lt;li&gt;ANL/Mini-ANL Protection / ANL / Mini-ANL 电路保护&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;1,500–3,000W RMS&lt;small&gt;1,500–3,000W RMS&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;1/0 Gauge Complete Amp Kits / 1/0 AWG 完整功放安装套装&lt;/li&gt;&lt;li&gt;1/0 Gauge Power Kits / 1/0 AWG 电源安装套装&lt;/li&gt;&lt;li&gt;High-Current Fuse Holders / 大电流保险丝座&lt;/li&gt;&lt;li&gt;Big 3 Upgrade Kits / Big 3 电气升级套装&lt;/li&gt;&lt;li&gt;Battery &amp;amp; Ground Accessories / 电池及接地配件&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Dual-Amp Systems&lt;small&gt;双功放系统&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;1/0 Gauge Dual-Amp Kits / 1/0 AWG 双功放安装套装&lt;/li&gt;&lt;li&gt;Distribution Blocks / 分配器&lt;/li&gt;&lt;li&gt;Dual RCA Sets / 双组 RCA 信号线&lt;/li&gt;&lt;li&gt;Speaker Wire / 喇叭线&lt;/li&gt;&lt;li&gt;Power &amp;amp; Ground Accessories / 电源及接地配件&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/details&gt;
+        &lt;details data-tax-view=&quot;wiring&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;02&lt;/span&gt;&lt;span&gt;Amp Wiring Kits&lt;small&gt;功放安装线材套装&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Shop All Amp Wiring Kits&lt;small&gt;查看全部功放安装套装&lt;/small&gt;&lt;/strong&gt;&lt;/div&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;8 Gauge Kits&lt;small&gt;8 AWG 套装&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;Power-Only Kit / 纯电源套装&lt;/li&gt;&lt;li&gt;2-Channel Complete Kit / 2 声道完整套装&lt;/li&gt;&lt;li&gt;4-Channel Complete Kit / 4 声道完整套装&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;4 Gauge Kits&lt;small&gt;4 AWG 套装&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;Power-Only Kit / 纯电源套装&lt;/li&gt;&lt;li&gt;2-Channel Complete Kit / 2 声道完整套装&lt;/li&gt;&lt;li&gt;4-Channel Complete Kit / 4 声道完整套装&lt;/li&gt;&lt;li&gt;5/6-Channel Complete Kit / 5/6 声道完整套装&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;1/0 Gauge Kits&lt;small&gt;1/0 AWG 套装&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;Power-Only Kit / 纯电源套装&lt;/li&gt;&lt;li&gt;2-Channel Complete Kit / 2 声道完整套装&lt;/li&gt;&lt;li&gt;4-Channel Complete Kit / 4 声道完整套装&lt;/li&gt;&lt;li&gt;5/6-Channel Complete Kit / 5/6 声道完整套装&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Dual-Amp Kits&lt;small&gt;双功放套装&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;Single Input / Dual Output / 单路输入 / 双路输出&lt;/li&gt;&lt;li&gt;Dual RCA Configuration / 双组 RCA 配置&lt;/li&gt;&lt;li&gt;High-Current System Kit / 大电流系统套装&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/details&gt;
+        &lt;details data-tax-view=&quot;power&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;03&lt;/span&gt;&lt;span&gt;Power &amp;amp; Ground&lt;small&gt;电源与接地&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Power Wire&lt;small&gt;电源线&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;8 Gauge / 8 AWG&lt;/li&gt;&lt;li&gt;4 Gauge / 4 AWG&lt;/li&gt;&lt;li&gt;1/0 Gauge / 1/0 AWG&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Ground Wire&lt;small&gt;接地线&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;Pre-Cut Ground Leads / 预裁接地线&lt;/li&gt;&lt;li&gt;Bulk Ground Wire / 整卷接地线&lt;/li&gt;&lt;li&gt;Grounding Kits / 接地套装&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Big 3 Upgrade Kits&lt;small&gt;Big 3 电气升级套装&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;4 Gauge Big 3 / 4 AWG Big 3&lt;/li&gt;&lt;li&gt;1/0 Gauge Big 3 / 1/0 AWG Big 3&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Battery Terminals / 电池端子&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Ground Distribution / 接地分配&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Power Distribution / 电源分配&lt;/strong&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/details&gt;
+        &lt;details data-tax-view=&quot;signal&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;04&lt;/span&gt;&lt;span&gt;Signal &amp;amp; Speaker Connections&lt;small&gt;信号与扬声器连接&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;RCA Interconnects&lt;small&gt;RCA 信号连接线&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;2-Channel RCA / 2 声道 RCA&lt;/li&gt;&lt;li&gt;4-Channel RCA / 4 声道 RCA&lt;/li&gt;&lt;li&gt;6-Channel RCA / 6 声道 RCA&lt;/li&gt;&lt;li&gt;Multiple Lengths / 多种长度&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Speaker Wire&lt;small&gt;喇叭线&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;16 Gauge / 16 AWG&lt;/li&gt;&lt;li&gt;14 Gauge / 14 AWG&lt;/li&gt;&lt;li&gt;12 Gauge / 12 AWG&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Remote Turn-On Wire / 功放远程启动线&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Y-Adapters / Y 型转接线&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Noise-Reduction Accessories / 降噪配件&lt;/strong&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/details&gt;
+        &lt;details data-tax-view=&quot;protection&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;05&lt;/span&gt;&lt;span&gt;Fuses &amp;amp; System Protection&lt;small&gt;保险丝与系统保护&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Fuse Holders&lt;small&gt;保险丝座&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;Mini-ANL&lt;/li&gt;&lt;li&gt;ANL&lt;/li&gt;&lt;li&gt;Waterproof Fuse Holders / 防水保险丝座&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Replacement Fuses&lt;small&gt;替换保险丝&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;60A / 80A&lt;/li&gt;&lt;li&gt;100A / 120A&lt;/li&gt;&lt;li&gt;150A / 200A&lt;/li&gt;&lt;li&gt;250A / 300A&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Distribution Blocks&lt;small&gt;电源分配器&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;Fused Distribution / 带保险丝分配器&lt;/li&gt;&lt;li&gt;Non-Fused Distribution / 无保险丝分配器&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Circuit Breakers / 断路器&lt;/strong&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/details&gt;
+        &lt;details data-tax-view=&quot;installation&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;06&lt;/span&gt;&lt;span&gt;Terminals &amp;amp; Installation&lt;small&gt;端子与安装配件&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;
+          &lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Ring Terminals&lt;small&gt;环形端子&lt;/small&gt;&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;8 Gauge / 8 AWG&lt;/li&gt;&lt;li&gt;4 Gauge / 4 AWG&lt;/li&gt;&lt;li&gt;1/0 Gauge / 1/0 AWG&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Ferrules / 线端套管&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Butt Connectors / 对接端子&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Heat Shrink / 热缩管&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Wire Loom / 线束保护套管&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Cable Ties / 扎带&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Firewall Grommets / 防火墙穿线胶圈&lt;/strong&gt;&lt;/div&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;strong&gt;Complete Connector Packs / 完整端子配件包&lt;/strong&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/details&gt;
+        &lt;details data-tax-view=&quot;builder&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;07&lt;/span&gt;&lt;span&gt;Build Your System&lt;small&gt;搭建你的系统&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;ul&gt;&lt;li&gt;Single Monoblock System / 单路单声道功放系统&lt;/li&gt;&lt;li&gt;2-Channel Amplifier System / 2 声道功放系统&lt;/li&gt;&lt;li&gt;4-Channel Amplifier System / 4 声道功放系统&lt;/li&gt;&lt;li&gt;5/6-Channel System / 5/6 声道系统&lt;/li&gt;&lt;li&gt;Dual-Amplifier System / 双功放系统&lt;/li&gt;&lt;li&gt;Electrical Upgrade System / 车辆电气升级系统&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/details&gt;
+        &lt;details data-tax-view=&quot;learn&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;08&lt;/span&gt;&lt;span&gt;Learn &amp;amp; Choose&lt;small&gt;选购指南与技术知识&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;ul&gt;&lt;li&gt;Find Your Wire Gauge / 如何选择正确线径&lt;/li&gt;&lt;li&gt;OFC vs. CCA / OFC 与 CCA 对比&lt;/li&gt;&lt;li&gt;Match Fuse Size to Amplifier / 如何根据功放匹配保险丝规格&lt;/li&gt;&lt;li&gt;Wiring Kit Component Guide / 功放线材套装组件指南&lt;/li&gt;&lt;li&gt;Voltage Drop &amp;amp; Cable Length / 电压降与线材长度&lt;/li&gt;&lt;li&gt;Single-Amp Wiring Diagram / 单功放接线图&lt;/li&gt;&lt;li&gt;4-Channel Wiring Diagram / 4 声道功放接线图&lt;/li&gt;&lt;li&gt;Dual-Amp Wiring Diagram / 双功放接线图&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/details&gt;
+        &lt;details data-tax-view=&quot;performance&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;09&lt;/span&gt;&lt;span&gt;Performance Audio&lt;small&gt;高性能音响&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;ul&gt;&lt;li&gt;Performance Amplifiers / 高性能功放&lt;/li&gt;&lt;li&gt;Car Speakers / 汽车扬声器&lt;/li&gt;&lt;li&gt;Subwoofers / 超低音扬声器&lt;/li&gt;&lt;li&gt;Complete Audio Systems / 完整音响系统&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/details&gt;
       &lt;/div&gt;
     &lt;/section&gt;
 
@@ -1107,7 +1150,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       const tabs=[...root.querySelectorAll(&#x27;.pas-tabs button&#x27;)];
       let currentView=&#x27;home&#x27;,currentPower=&#x27;all&#x27;;
       function render(){
-        const visible=products.filter(p=&gt;(currentView===&#x27;home&#x27;||currentView===&#x27;builder&#x27;||p.view===currentView)&amp;&amp;(currentPower===&#x27;all&#x27;||p.power===currentPower));
+        const visible=products.filter(p=&gt;{const viewMatch=currentView===&#x27;home&#x27;||currentView===&#x27;builder&#x27;||currentView===&#x27;systempower&#x27;||(currentView===&#x27;performance&#x27;&amp;&amp;[&#x27;amplifiers&#x27;,&#x27;speakers&#x27;].includes(p.view))||p.view===currentView;return viewMatch&amp;&amp;(currentPower===&#x27;all&#x27;||p.power===currentPower);});
         grid.innerHTML=visible.length?visible.map((p,i)=&gt;`&lt;article class=&quot;pas-product&quot;&gt;&lt;div class=&quot;pas-product-visual&quot;&gt;&lt;img src=&quot;${images[p.imageKey]}&quot; alt=&quot;${p.name} concept product photo&quot;&gt;&lt;/div&gt;&lt;h3&gt;${p.name}&lt;/h3&gt;&lt;div class=&quot;pas-product-meta&quot;&gt;${p.meta}&lt;/div&gt;&lt;div class=&quot;pas-product-price&quot;&gt;${p.price}&lt;/div&gt;&lt;button type=&quot;button&quot; data-add=&quot;${i}&quot;&gt;Add to cart&lt;/button&gt;&lt;/article&gt;`).join(&#x27;&#x27;):&#x27;&lt;p&gt;No products match this combination.&lt;/p&gt;&#x27;;
         if(window.lucide) lucide.createIcons({attrs:{width:16,height:16}});
       }
@@ -1115,11 +1158,16 @@ html&gt;body{padding:0}&lt;/style&gt;
         currentView=view; tabs.forEach(t=&gt;t.setAttribute(&#x27;aria-selected&#x27;,String(t.dataset.view===view)));
         root.querySelectorAll(&#x27;[data-home-only]&#x27;).forEach(el=&gt;el.hidden=view!==&#x27;home&#x27;);
         root.querySelector(&#x27;#pas-builder&#x27;).hidden=!(view===&#x27;home&#x27;||view===&#x27;builder&#x27;);
-        root.querySelector(&#x27;#pas-products&#x27;).querySelector(&#x27;h2&#x27;).textContent=view===&#x27;home&#x27;?&#x27;Shop by system power&#x27;:({wiring:&#x27;Amp wiring kits&#x27;,amplifiers:&#x27;Performance amplifiers&#x27;,speakers:&#x27;Car speakers&#x27;,power:&#x27;Power &amp; ground&#x27;,signal:&#x27;Signal &amp; speaker connections&#x27;,protection:&#x27;Fuses &amp; system protection&#x27;,installation:&#x27;Terminals &amp; installation&#x27;,builder:&#x27;Recommended system products&#x27;}[view]||&#x27;Products&#x27;);
+        const taxonomy=root.querySelector(&#x27;#pas-taxonomy&#x27;); taxonomy.hidden=false;
+        taxonomy.querySelectorAll(&#x27;details[data-tax-view]&#x27;).forEach(d=&gt;{const match=view===&#x27;home&#x27;||d.dataset.taxView===view;d.hidden=!match;if(view!==&#x27;home&#x27;)d.open=match;});
+        const titles={systempower:&#x27;Shop by System Power / 按系统功率选购&#x27;,wiring:&#x27;Amp Wiring Kits / 功放安装线材套装&#x27;,power:&#x27;Power &amp; Ground / 电源与接地&#x27;,signal:&#x27;Signal &amp; Speaker Connections / 信号与扬声器连接&#x27;,protection:&#x27;Fuses &amp; System Protection / 保险丝与系统保护&#x27;,installation:&#x27;Terminals &amp; Installation / 端子与安装配件&#x27;,builder:&#x27;Build Your System / 搭建你的系统&#x27;,learn:&#x27;Learn &amp; Choose / 选购指南与技术知识&#x27;,performance:&#x27;Performance Audio / 高性能音响&#x27;};
+        root.querySelector(&#x27;#pas-products&#x27;).hidden=view===&#x27;learn&#x27;;
+        root.querySelector(&#x27;#pas-products&#x27;).querySelector(&#x27;h2&#x27;).textContent=view===&#x27;home&#x27;?&#x27;Shop by System Power / 按系统功率选购&#x27;:(titles[view]||&#x27;Products / 商品&#x27;);
         currentPower=&#x27;all&#x27;; root.querySelectorAll(&#x27;[data-power]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,String(b.dataset.power===&#x27;all&#x27;))); render();
         root.querySelector(&#x27;.pas-content&#x27;).scrollIntoView({behavior:&#x27;smooth&#x27;,block:&#x27;start&#x27;});
       }
       tabs.forEach(t=&gt;t.addEventListener(&#x27;click&#x27;,()=&gt;setView(t.dataset.view)));
+      root.querySelector(&#x27;.pas-expand-all&#x27;).addEventListener(&#x27;click&#x27;,e=&gt;{const list=[...root.querySelectorAll(&#x27;.pas-taxonomy details:not([hidden])&#x27;)];const openAll=list.some(d=&gt;!d.open);list.forEach(d=&gt;d.open=openAll);e.currentTarget.textContent=openAll?&#x27;Collapse all / 全部收起&#x27;:&#x27;Expand all / 全部展开&#x27;;});
       root.querySelectorAll(&#x27;[data-open]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;setView(b.dataset.open)));
       root.querySelectorAll(&#x27;[data-power]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;{currentPower=b.dataset.power;root.querySelectorAll(&#x27;[data-power]&#x27;).forEach(x=&gt;x.setAttribute(&#x27;aria-pressed&#x27;,String(x===b)));render();}));
       root.querySelector(&#x27;[data-jump=&quot;products&quot;]&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;root.querySelector(&#x27;#pas-products&#x27;).scrollIntoView({behavior:&#x27;smooth&#x27;}));
