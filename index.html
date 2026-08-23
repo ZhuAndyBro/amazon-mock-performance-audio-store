@@ -1011,6 +1011,39 @@ html&gt;body{padding:0}&lt;/style&gt;
     #pas-store .pas-branch ul { display:flex; flex-wrap:wrap; gap:7px; margin:10px 0 0; padding:0; list-style:none; }
     #pas-store .pas-branch li { border:1px solid light-dark(#d5d9d9,#4d565d); border-radius:999px; padding:6px 9px; font-size:12px; line-height:1.25; background:light-dark(#fff,#2c3237); }
     @media (max-width:760px){#pas-store .pas-taxonomy-grid,#pas-store .pas-tree{grid-template-columns:1fr}#pas-store .pas-taxonomy details[open]{grid-column:auto}#pas-store .pas-taxonomy-head{align-items:start;flex-direction:column}}
+
+    #pas-store .pas-production { background:light-dark(#fff,#24292d); }
+    #pas-store .pas-production-head { display:flex; justify-content:space-between; gap:22px; align-items:end; margin-bottom:18px; }
+    #pas-store .pas-status-legend { display:flex; flex-wrap:wrap; gap:7px; justify-content:flex-end; }
+    #pas-store .pas-status-legend span,#pas-store .pas-badge { display:inline-flex; border-radius:999px; padding:5px 9px; font-size:11px; font-weight:800; }
+    #pas-store .is-p0 { background:#dff6e8; color:#136c39; } #pas-store .is-p1 { background:#fff1cc; color:#815500; } #pas-store .is-p2 { background:#e8ecf0; color:#48545d; } #pas-store .is-buy { background:#f3e5ff; color:#6d2790; }
+    #pas-store .pas-production-alert { display:flex; gap:16px; align-items:center; border-left:5px solid #ff9900; background:light-dark(#fff7e6,#342b1f); padding:15px 17px; margin-bottom:16px; }
+    #pas-store .pas-production-alert strong { flex:0 0 180px; }
+    #pas-store .pas-production-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:16px 0; }
+    #pas-store .pas-production-kpis div { display:flex; gap:12px; align-items:center; border:1px solid light-dark(#d5d9d9,#444c51); padding:13px; border-radius:8px; }
+    #pas-store .pas-production-kpis b { color:#ff9900; font-size:28px; } #pas-store .pas-production-kpis span { font-size:12px; }
+    #pas-store .pas-production-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0; }
+    #pas-store .pas-production-tabs button { border:1px solid light-dark(#aeb4b8,#566068); background:transparent; color:inherit; border-radius:999px; padding:8px 12px; cursor:pointer; }
+    #pas-store .pas-production-tabs button[aria-pressed=&quot;true&quot;] { background:#232f3e; color:white; border-color:#232f3e; }
+    #pas-store .pas-prod-panels { display:grid; gap:14px; }
+    #pas-store .pas-prod-panel { border:1px solid light-dark(#d5d9d9,#444c51); border-radius:10px; padding:18px; background:light-dark(#fafafa,#292e32); }
+    #pas-store .pas-prod-panel h3 { margin:0 0 14px; font-size:17px; }
+    #pas-store .pas-table-wrap { overflow-x:auto; } #pas-store .pas-bom-table { width:100%; border-collapse:collapse; min-width:800px; font-size:12px; }
+    #pas-store .pas-bom-table th,#pas-store .pas-bom-table td { border-bottom:1px solid light-dark(#ddd,#454d53); padding:10px; text-align:left; vertical-align:top; }
+    #pas-store .pas-bom-table th { background:#232f3e; color:white; } #pas-store .pas-bom-table .pas-badge { margin-left:6px; }
+    #pas-store .pas-table-note { margin:12px 0 0; color:light-dark(#5f676d,#b9c1c6); font-size:12px; } #pas-store .pas-table-note.warning { color:light-dark(#8b5500,#ffc66b); }
+    #pas-store .pas-channel-grid,#pas-store .pas-launch-grid,#pas-store .pas-gap-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+    #pas-store .pas-channel-grid article,#pas-store .pas-launch-grid article,#pas-store .pas-gap-list article { border:1px solid light-dark(#ddd,#454d53); border-radius:8px; padding:13px; background:light-dark(#fff,#24292d); }
+    #pas-store .pas-channel-grid strong,#pas-store .pas-launch-grid strong,#pas-store .pas-gap-list strong { display:block; margin:8px 0 5px; font-size:13px; }
+    #pas-store .pas-channel-grid p,#pas-store .pas-gap-list p { margin:0; font-size:12px; color:light-dark(#5f676d,#b9c1c6); }
+    #pas-store .pas-launch-grid article&gt;span:first-child { color:#ff9900; font-size:11px; font-weight:800; } #pas-store .pas-launch-grid small { color:light-dark(#5f676d,#b9c1c6); }
+    #pas-store .pas-module-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    #pas-store .pas-module-grid article { display:flex; gap:12px; border:1px solid light-dark(#ddd,#454d53); border-radius:8px; padding:13px; }
+    #pas-store .pas-module-grid article&gt;b { display:grid; place-items:center; flex:0 0 36px; height:36px; border-radius:50%; background:#232f3e; color:#ffb84d; }
+    #pas-store .pas-module-grid p { margin:5px 0 8px; font-size:12px; } #pas-store .pas-owner { font-size:11px; font-weight:800; } #pas-store .pas-owner.make { color:#16834a; } #pas-store .pas-owner.buy { color:#7f4795; }
+    #pas-store .pas-flow-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; } #pas-store .pas-flow-grid div { border-left:4px solid #ff9900; padding:12px; background:light-dark(#fff,#24292d); } #pas-store .pas-flow-grid p { margin:6px 0 0; font-size:12px; }
+    #pas-store .pas-gates { margin:0; padding-left:22px; } #pas-store .pas-gates li { margin:8px 0; padding-left:5px; font-size:13px; }
+    @media(max-width:760px){#pas-store .pas-production-head{align-items:start;flex-direction:column}#pas-store .pas-status-legend{justify-content:start}#pas-store .pas-production-alert{align-items:start;flex-direction:column}#pas-store .pas-production-alert strong{flex:auto}#pas-store .pas-production-kpis{grid-template-columns:1fr 1fr}#pas-store .pas-channel-grid,#pas-store .pas-launch-grid,#pas-store .pas-gap-list,#pas-store .pas-module-grid,#pas-store .pas-flow-grid{grid-template-columns:1fr}}
   &lt;/style&gt;
 
   &lt;div class=&quot;pas-marketbar&quot;&gt;
@@ -1036,6 +1069,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;button type=&quot;button&quot; data-view=&quot;builder&quot; aria-selected=&quot;false&quot;&gt;Build Your System / 搭建系统&lt;/button&gt;
     &lt;button type=&quot;button&quot; data-view=&quot;learn&quot; aria-selected=&quot;false&quot;&gt;Learn &amp;amp; Choose / 选购指南&lt;/button&gt;
     &lt;button type=&quot;button&quot; data-view=&quot;performance&quot; aria-selected=&quot;false&quot;&gt;Performance Audio / 高性能音响&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-view=&quot;production&quot; aria-selected=&quot;false&quot;&gt;Production Map / 生产地图&lt;/button&gt;
   &lt;/nav&gt;
 
   &lt;main class=&quot;pas-content&quot;&gt;
@@ -1088,6 +1122,86 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;details data-tax-view=&quot;builder&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;07&lt;/span&gt;&lt;span&gt;Build Your System&lt;small&gt;搭建你的系统&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;ul&gt;&lt;li&gt;Single Monoblock System / 单路单声道功放系统&lt;/li&gt;&lt;li&gt;2-Channel Amplifier System / 2 声道功放系统&lt;/li&gt;&lt;li&gt;4-Channel Amplifier System / 4 声道功放系统&lt;/li&gt;&lt;li&gt;5/6-Channel System / 5/6 声道系统&lt;/li&gt;&lt;li&gt;Dual-Amplifier System / 双功放系统&lt;/li&gt;&lt;li&gt;Electrical Upgrade System / 车辆电气升级系统&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/details&gt;
         &lt;details data-tax-view=&quot;learn&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;08&lt;/span&gt;&lt;span&gt;Learn &amp;amp; Choose&lt;small&gt;选购指南与技术知识&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;ul&gt;&lt;li&gt;Find Your Wire Gauge / 如何选择正确线径&lt;/li&gt;&lt;li&gt;OFC vs. CCA / OFC 与 CCA 对比&lt;/li&gt;&lt;li&gt;Match Fuse Size to Amplifier / 如何根据功放匹配保险丝规格&lt;/li&gt;&lt;li&gt;Wiring Kit Component Guide / 功放线材套装组件指南&lt;/li&gt;&lt;li&gt;Voltage Drop &amp;amp; Cable Length / 电压降与线材长度&lt;/li&gt;&lt;li&gt;Single-Amp Wiring Diagram / 单功放接线图&lt;/li&gt;&lt;li&gt;4-Channel Wiring Diagram / 4 声道功放接线图&lt;/li&gt;&lt;li&gt;Dual-Amp Wiring Diagram / 双功放接线图&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/details&gt;
         &lt;details data-tax-view=&quot;performance&quot;&gt;&lt;summary&gt;&lt;span class=&quot;pas-index&quot;&gt;09&lt;/span&gt;&lt;span&gt;Performance Audio&lt;small&gt;高性能音响&lt;/small&gt;&lt;/span&gt;&lt;/summary&gt;&lt;div class=&quot;pas-tree&quot;&gt;&lt;div class=&quot;pas-branch&quot;&gt;&lt;ul&gt;&lt;li&gt;Performance Amplifiers / 高性能功放&lt;/li&gt;&lt;li&gt;Car Speakers / 汽车扬声器&lt;/li&gt;&lt;li&gt;Subwoofers / 超低音扬声器&lt;/li&gt;&lt;li&gt;Complete Audio Systems / 完整音响系统&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class=&quot;pas-section pas-production&quot; id=&quot;pas-production&quot;&gt;
+      &lt;div class=&quot;pas-production-head&quot;&gt;&lt;div&gt;&lt;span class=&quot;pas-eyebrow&quot;&gt;STOREFRONT → FACTORY / 店铺结构 → 工厂执行&lt;/span&gt;&lt;h2&gt;Amp Wiring Kit BOM &amp;amp; Production Product Map&lt;/h2&gt;&lt;p class=&quot;pas-lead&quot;&gt;功放安装套装BOM与生产产品地图 · Store categories are translated into shared manufacturing modules, launch SKUs and later-stage gaps.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;pas-status-legend&quot;&gt;&lt;span class=&quot;is-p0&quot;&gt;P0 首发&lt;/span&gt;&lt;span class=&quot;is-p1&quot;&gt;P1 扩展&lt;/span&gt;&lt;span class=&quot;is-p2&quot;&gt;P2 后续&lt;/span&gt;&lt;span class=&quot;is-buy&quot;&gt;外购/协作&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+
+      &lt;div class=&quot;pas-production-alert&quot;&gt;&lt;strong&gt;Production rule / 生产规则&lt;/strong&gt;&lt;span&gt;前台类目用于表达“完整系统”；工厂只按照本生产地图下单。第一阶段线缆导体采用OFC。6声道配置由4CH RCA＋2CH RCA组成，不开发独立6CH RCA。&lt;/span&gt;&lt;/div&gt;
+
+      &lt;div class=&quot;pas-production-kpis&quot;&gt;&lt;div&gt;&lt;b&gt;9&lt;/b&gt;&lt;span&gt;Storefront categories&lt;br&gt;前台主类目&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;6&lt;/b&gt;&lt;span&gt;Shared BOM families&lt;br&gt;共享零件族&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;4&lt;/b&gt;&lt;span&gt;P0 launch kits&lt;br&gt;首发套装&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;2&lt;/b&gt;&lt;span&gt;Core conductor platforms&lt;br&gt;OFC供电＋信号&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+
+      &lt;div class=&quot;pas-production-tabs&quot; role=&quot;group&quot; aria-label=&quot;Production map filters&quot;&gt;&lt;button type=&quot;button&quot; data-prod-filter=&quot;all&quot; aria-pressed=&quot;true&quot;&gt;All / 全部&lt;/button&gt;&lt;button type=&quot;button&quot; data-prod-filter=&quot;p0&quot; aria-pressed=&quot;false&quot;&gt;P0 Launch / 首发&lt;/button&gt;&lt;button type=&quot;button&quot; data-prod-filter=&quot;p1&quot; aria-pressed=&quot;false&quot;&gt;P1 Extension / 扩展&lt;/button&gt;&lt;button type=&quot;button&quot; data-prod-filter=&quot;modules&quot; aria-pressed=&quot;false&quot;&gt;Shared Modules / 共享零件&lt;/button&gt;&lt;button type=&quot;button&quot; data-prod-filter=&quot;gaps&quot; aria-pressed=&quot;false&quot;&gt;Gaps / 缺口&lt;/button&gt;&lt;/div&gt;
+
+      &lt;div class=&quot;pas-prod-panels&quot;&gt;
+        &lt;div class=&quot;pas-prod-panel&quot; data-prod-group=&quot;p0 p1&quot;&gt;
+          &lt;h3&gt;1. Kit platform BOM / 套装平台BOM&lt;/h3&gt;
+          &lt;div class=&quot;pas-table-wrap&quot;&gt;&lt;table class=&quot;pas-bom-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Platform&lt;br&gt;平台&lt;/th&gt;&lt;th&gt;Main power&lt;br&gt;主电源线&lt;/th&gt;&lt;th&gt;Ground&lt;br&gt;接地线&lt;/th&gt;&lt;th&gt;Remote&lt;/th&gt;&lt;th&gt;Speaker wire&lt;br&gt;喇叭线&lt;/th&gt;&lt;th&gt;Main protection&lt;br&gt;主保护&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;strong&gt;8 AWG OFC&lt;/strong&gt;&lt;span class=&quot;pas-badge is-p0&quot;&gt;P0&lt;/span&gt;&lt;/td&gt;&lt;td&gt;17 ft · blue/red&lt;/td&gt;&lt;td&gt;3 ft · black&lt;/td&gt;&lt;td&gt;17 ft · 18 AWG&lt;/td&gt;&lt;td&gt;20 ft · 16 AWG&lt;/td&gt;&lt;td&gt;Mini-ANL/ANL holder + 60A&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;strong&gt;4 AWG OFC&lt;/strong&gt;&lt;span class=&quot;pas-badge is-p0&quot;&gt;P0&lt;/span&gt;&lt;/td&gt;&lt;td&gt;17 ft · blue/red&lt;/td&gt;&lt;td&gt;3 ft · black&lt;/td&gt;&lt;td&gt;17 ft · 18 AWG&lt;/td&gt;&lt;td&gt;20 ft · 16 AWG&lt;br&gt;&lt;small&gt;5/6CH length to verify&lt;/small&gt;&lt;/td&gt;&lt;td&gt;Mini-ANL/ANL holder + 100A&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;strong&gt;1/0 AWG OFC&lt;/strong&gt;&lt;span class=&quot;pas-badge is-p0&quot;&gt;P0&lt;/span&gt;&lt;/td&gt;&lt;td&gt;17 ft · blue/red&lt;/td&gt;&lt;td&gt;3 ft · black&lt;/td&gt;&lt;td&gt;17 ft · 18 AWG&lt;/td&gt;&lt;td&gt;20 ft · 12 AWG&lt;/td&gt;&lt;td&gt;ANL holder + 300A&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;strong&gt;1/0 Dual-Amp&lt;/strong&gt;&lt;span class=&quot;pas-badge is-p1&quot;&gt;P1&lt;/span&gt;&lt;/td&gt;&lt;td&gt;17 ft 1/0 + 5 ft 4 AWG branch&lt;/td&gt;&lt;td&gt;3 ft 1/0 + 5 ft 4 AWG branch&lt;/td&gt;&lt;td&gt;17 ft · 18 AWG&lt;/td&gt;&lt;td&gt;Complete: 50–60 ft · 12/14 AWG&lt;/td&gt;&lt;td&gt;300A main + fused positive distribution&lt;/td&gt;&lt;/tr&gt;
+          &lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+          &lt;p class=&quot;pas-table-note&quot;&gt;Lengths are derived from the current benchmark BOM and remain engineering inputs—not final claims. Cable resistance, voltage drop, temperature rise and fuse coordination must be validated before mass production.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;pas-prod-panel&quot; data-prod-group=&quot;p0 p1&quot;&gt;
+          &lt;h3&gt;2. Channel configuration = add-on BOM / 声道配置＝增加件&lt;/h3&gt;
+          &lt;div class=&quot;pas-channel-grid&quot;&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p1&quot;&gt;Power-only&lt;/span&gt;&lt;strong&gt;Base power platform&lt;/strong&gt;&lt;p&gt;不增加RCA；保留电源、接地、Remote、喇叭线及安装辅料。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p0&quot;&gt;2CH Complete&lt;/span&gt;&lt;strong&gt;+ 2CH RCA · 5 m ×1&lt;/strong&gt;&lt;p&gt;8 / 4 / 1/0 AWG共享同一2声道RCA模块。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p0&quot;&gt;4CH Complete&lt;/span&gt;&lt;strong&gt;+ 4CH RCA · 5 m ×1&lt;/strong&gt;&lt;p&gt;首发重点为4 AWG；其他线径按需求扩展。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p1&quot;&gt;5/6CH Complete&lt;/span&gt;&lt;strong&gt;+ 4CH RCA ×1 + 2CH RCA ×1&lt;/strong&gt;&lt;p&gt;不开发独立6CH RCA，降低模具、采购与库存复杂度。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p1&quot;&gt;Dual-Amp Power&lt;/span&gt;&lt;strong&gt;Power distribution only&lt;/strong&gt;&lt;p&gt;1/0主线、两组4 AWG支路、正极保险分配与接地分配。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p1&quot;&gt;Dual-Amp Complete&lt;/span&gt;&lt;strong&gt;+ 4CH RCA + 2CH RCA + 50–60 ft speaker wire&lt;/strong&gt;&lt;p&gt;面向单声道低音功放＋四声道全频功放。&lt;/p&gt;&lt;/article&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;pas-prod-panel&quot; data-prod-group=&quot;p0&quot;&gt;
+          &lt;h3&gt;3. P0 launch SKU / 第一阶段首发SKU&lt;/h3&gt;
+          &lt;div class=&quot;pas-launch-grid&quot;&gt;&lt;article&gt;&lt;span&gt;SKU 01&lt;/span&gt;&lt;strong&gt;8 AWG 2CH Complete&lt;/strong&gt;&lt;small&gt;入门流量款 · 600W class&lt;/small&gt;&lt;/article&gt;&lt;article&gt;&lt;span&gt;SKU 02&lt;/span&gt;&lt;strong&gt;4 AWG 2CH Complete&lt;/strong&gt;&lt;small&gt;主流核心款 · 600–1,500W class&lt;/small&gt;&lt;/article&gt;&lt;article&gt;&lt;span&gt;SKU 03&lt;/span&gt;&lt;strong&gt;4 AWG 4CH Complete&lt;/strong&gt;&lt;small&gt;全车扬声器系统&lt;/small&gt;&lt;/article&gt;&lt;article&gt;&lt;span&gt;SKU 04&lt;/span&gt;&lt;strong&gt;1/0 AWG 2CH Complete&lt;/strong&gt;&lt;small&gt;高功率核心款 · 1,500–3,000W class&lt;/small&gt;&lt;/article&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;pas-prod-panel&quot; data-prod-group=&quot;p1&quot;&gt;
+          &lt;h3&gt;4. P1 extension SKU / 第一阶段扩展SKU&lt;/h3&gt;
+          &lt;div class=&quot;pas-launch-grid p1&quot;&gt;&lt;article&gt;&lt;strong&gt;8 / 4 / 1/0 Power-only&lt;/strong&gt;&lt;small&gt;共享基础BOM，去掉RCA&lt;/small&gt;&lt;/article&gt;&lt;article&gt;&lt;strong&gt;4 AWG 5/6CH Complete&lt;/strong&gt;&lt;small&gt;4CH＋2CH RCA组合&lt;/small&gt;&lt;/article&gt;&lt;article&gt;&lt;strong&gt;1/0 Dual-Amp Power&lt;/strong&gt;&lt;small&gt;专业安装用户&lt;/small&gt;&lt;/article&gt;&lt;article&gt;&lt;strong&gt;1/0 Dual-Amp Complete&lt;/strong&gt;&lt;small&gt;完整双功放系统&lt;/small&gt;&lt;/article&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;pas-prod-panel&quot; data-prod-group=&quot;modules&quot;&gt;
+          &lt;h3&gt;5. Shared manufacturing modules / 六大共享生产模块&lt;/h3&gt;
+          &lt;div class=&quot;pas-module-grid&quot;&gt;
+            &lt;article&gt;&lt;b&gt;A&lt;/b&gt;&lt;div&gt;&lt;strong&gt;High-current cable / 大电流线材&lt;/strong&gt;&lt;p&gt;8 AWG、4 AWG、1/0 AWG OFC电源线（蓝/红）与接地线（黑）。&lt;/p&gt;&lt;span class=&quot;pas-owner make&quot;&gt;建议自产核心&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;b&gt;B&lt;/b&gt;&lt;div&gt;&lt;strong&gt;Signal &amp;amp; speaker / 信号与喇叭线&lt;/strong&gt;&lt;p&gt;18 AWG Remote；16 / 14 / 12 AWG喇叭线；2CH与4CH RCA 5 m。&lt;/p&gt;&lt;span class=&quot;pas-owner make&quot;&gt;自产／验证&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;b&gt;C&lt;/b&gt;&lt;div&gt;&lt;strong&gt;Protection &amp;amp; distribution / 保护与分配&lt;/strong&gt;&lt;p&gt;ANL、Mini-ANL保险座和保险片；保险正极分线器；非保险接地分线器。&lt;/p&gt;&lt;span class=&quot;pas-owner buy&quot;&gt;建议首期外购标件&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;b&gt;D&lt;/b&gt;&lt;div&gt;&lt;strong&gt;Terminals / 端子连接&lt;/strong&gt;&lt;p&gt;8 / 4 / 1/0 AWG大线端子；12 / 16 / 18 AWG叉形、快接与对接端子。&lt;/p&gt;&lt;span class=&quot;pas-owner buy&quot;&gt;外购＋来料验证&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;b&gt;E&lt;/b&gt;&lt;div&gt;&lt;strong&gt;Installation materials / 安装辅料&lt;/strong&gt;&lt;p&gt;防火墙胶圈、热缩管、扎带、尼龙保护编织网。&lt;/p&gt;&lt;span class=&quot;pas-owner buy&quot;&gt;外购标件&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;b&gt;F&lt;/b&gt;&lt;div&gt;&lt;strong&gt;Packaging &amp;amp; content / 包装与内容&lt;/strong&gt;&lt;p&gt;平台包装、声道标签、接线说明、Front/Rear/Sub识别标签。&lt;/p&gt;&lt;span class=&quot;pas-owner make&quot;&gt;自有设计＋协作生产&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;pas-prod-panel&quot; data-prod-group=&quot;modules&quot;&gt;
+          &lt;h3&gt;6. Correct Dual-Amp distribution architecture / 双功放分配器修正&lt;/h3&gt;
+          &lt;div class=&quot;pas-flow-grid&quot;&gt;&lt;div&gt;&lt;strong&gt;Positive / 正极&lt;/strong&gt;&lt;p&gt;Battery → 300A main fuse → 1/0 AWG → &lt;em&gt;fused distribution block&lt;/em&gt; → two 4 AWG amplifier branches&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Ground / 负极&lt;/strong&gt;&lt;p&gt;Two 4 AWG amplifier grounds → &lt;em&gt;non-fused ground block&lt;/em&gt; → 1/0 AWG → chassis ground&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;p class=&quot;pas-table-note warning&quot;&gt;现有基准BOM把两个分线器写成同一项，不足以指导生产。建议开发共用外壳平台，但正极版必须具备独立支路保险，接地版不装保险。&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;pas-prod-panel&quot; data-prod-group=&quot;gaps&quot;&gt;
+          &lt;h3&gt;7. Storefront-to-BOM gap register / 前台目录与现有BOM缺口&lt;/h3&gt;
+          &lt;div class=&quot;pas-gap-list&quot;&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p1&quot;&gt;Clarify&lt;/span&gt;&lt;strong&gt;6-Channel RCA&lt;/strong&gt;&lt;p&gt;作为前台选购入口保留；生产上用4CH＋2CH组合，不做独立线缆。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p1&quot;&gt;Validate&lt;/span&gt;&lt;strong&gt;14 AWG speaker wire&lt;/strong&gt;&lt;p&gt;Dual-Amp Complete可在12/14 AWG中选型，需样车布线和成本验证。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p2&quot;&gt;P2&lt;/span&gt;&lt;strong&gt;Big 3, battery terminals &amp;amp; bulk ground&lt;/strong&gt;&lt;p&gt;属于完整电气升级目录，但不在四款P0套装的必需BOM中。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p2&quot;&gt;P2&lt;/span&gt;&lt;strong&gt;Y-adapters, noise reduction &amp;amp; circuit breakers&lt;/strong&gt;&lt;p&gt;当前BOM没有定义规格、测试或供应商，不能直接进入采购清单。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-buy&quot;&gt;Partner&lt;/span&gt;&lt;strong&gt;Amplifiers, speakers &amp;amp; subwoofers&lt;/strong&gt;&lt;p&gt;前期由合作工厂生产；必须单独建立电声规格、可靠性和售后标准。&lt;/p&gt;&lt;/article&gt;
+            &lt;article&gt;&lt;span class=&quot;pas-badge is-p2&quot;&gt;Content&lt;/span&gt;&lt;strong&gt;Learn &amp;amp; Choose&lt;/strong&gt;&lt;p&gt;属于内容资产，不是物料；由工程验证数据生成线径、保险与接线指南。&lt;/p&gt;&lt;/article&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;pas-prod-panel&quot; data-prod-group=&quot;gaps&quot;&gt;
+          &lt;h3&gt;8. Mandatory engineering gates / 量产前必须关闭的验证项&lt;/h3&gt;
+          &lt;ol class=&quot;pas-gates&quot;&gt;&lt;li&gt;以真实导体截面积、20°C直流电阻、线长和压降确定功率推荐，不复制竞品峰值W数。&lt;/li&gt;&lt;li&gt;验证60A、100A和300A保险座持续温升；“通用外壳”不代表全部电流等级自动通过。&lt;/li&gt;&lt;li&gt;建立OFC材质证明、来料抽检、端子压接拉力、耐腐蚀和绝缘耐磨标准。&lt;/li&gt;&lt;li&gt;确认4 AWG 5/6CH喇叭线究竟采用20 ft还是50–60 ft，样车验证后冻结BOM。&lt;/li&gt;&lt;li&gt;所有商品页、包装、拣货码区分2CH与4CH RCA，避免竞品目录中出现的错配问题。&lt;/li&gt;&lt;/ol&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/section&gt;
 
@@ -1158,15 +1272,16 @@ html&gt;body{padding:0}&lt;/style&gt;
         currentView=view; tabs.forEach(t=&gt;t.setAttribute(&#x27;aria-selected&#x27;,String(t.dataset.view===view)));
         root.querySelectorAll(&#x27;[data-home-only]&#x27;).forEach(el=&gt;el.hidden=view!==&#x27;home&#x27;);
         root.querySelector(&#x27;#pas-builder&#x27;).hidden=!(view===&#x27;home&#x27;||view===&#x27;builder&#x27;);
-        const taxonomy=root.querySelector(&#x27;#pas-taxonomy&#x27;); taxonomy.hidden=false;
+        const taxonomy=root.querySelector(&#x27;#pas-taxonomy&#x27;); taxonomy.hidden=view===&#x27;production&#x27;; root.querySelector(&#x27;#pas-production&#x27;).hidden=!(view===&#x27;home&#x27;||view===&#x27;production&#x27;);
         taxonomy.querySelectorAll(&#x27;details[data-tax-view]&#x27;).forEach(d=&gt;{const match=view===&#x27;home&#x27;||d.dataset.taxView===view;d.hidden=!match;if(view!==&#x27;home&#x27;)d.open=match;});
-        const titles={systempower:&#x27;Shop by System Power / 按系统功率选购&#x27;,wiring:&#x27;Amp Wiring Kits / 功放安装线材套装&#x27;,power:&#x27;Power &amp; Ground / 电源与接地&#x27;,signal:&#x27;Signal &amp; Speaker Connections / 信号与扬声器连接&#x27;,protection:&#x27;Fuses &amp; System Protection / 保险丝与系统保护&#x27;,installation:&#x27;Terminals &amp; Installation / 端子与安装配件&#x27;,builder:&#x27;Build Your System / 搭建你的系统&#x27;,learn:&#x27;Learn &amp; Choose / 选购指南与技术知识&#x27;,performance:&#x27;Performance Audio / 高性能音响&#x27;};
-        root.querySelector(&#x27;#pas-products&#x27;).hidden=view===&#x27;learn&#x27;;
+        const titles={production:&#x27;Production Map / 生产地图&#x27;,systempower:&#x27;Shop by System Power / 按系统功率选购&#x27;,wiring:&#x27;Amp Wiring Kits / 功放安装线材套装&#x27;,power:&#x27;Power &amp; Ground / 电源与接地&#x27;,signal:&#x27;Signal &amp; Speaker Connections / 信号与扬声器连接&#x27;,protection:&#x27;Fuses &amp; System Protection / 保险丝与系统保护&#x27;,installation:&#x27;Terminals &amp; Installation / 端子与安装配件&#x27;,builder:&#x27;Build Your System / 搭建你的系统&#x27;,learn:&#x27;Learn &amp; Choose / 选购指南与技术知识&#x27;,performance:&#x27;Performance Audio / 高性能音响&#x27;};
+        root.querySelector(&#x27;#pas-products&#x27;).hidden=view===&#x27;learn&#x27;||view===&#x27;production&#x27;;
         root.querySelector(&#x27;#pas-products&#x27;).querySelector(&#x27;h2&#x27;).textContent=view===&#x27;home&#x27;?&#x27;Shop by System Power / 按系统功率选购&#x27;:(titles[view]||&#x27;Products / 商品&#x27;);
         currentPower=&#x27;all&#x27;; root.querySelectorAll(&#x27;[data-power]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,String(b.dataset.power===&#x27;all&#x27;))); render();
         root.querySelector(&#x27;.pas-content&#x27;).scrollIntoView({behavior:&#x27;smooth&#x27;,block:&#x27;start&#x27;});
       }
       tabs.forEach(t=&gt;t.addEventListener(&#x27;click&#x27;,()=&gt;setView(t.dataset.view)));
+      root.querySelectorAll(&#x27;[data-prod-filter]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;{const f=b.dataset.prodFilter;root.querySelectorAll(&#x27;[data-prod-filter]&#x27;).forEach(x=&gt;x.setAttribute(&#x27;aria-pressed&#x27;,String(x===b)));root.querySelectorAll(&#x27;[data-prod-group]&#x27;).forEach(p=&gt;p.hidden=!(f===&#x27;all&#x27;||p.dataset.prodGroup.split(&#x27; &#x27;).includes(f)));}));
       root.querySelector(&#x27;.pas-expand-all&#x27;).addEventListener(&#x27;click&#x27;,e=&gt;{const list=[...root.querySelectorAll(&#x27;.pas-taxonomy details:not([hidden])&#x27;)];const openAll=list.some(d=&gt;!d.open);list.forEach(d=&gt;d.open=openAll);e.currentTarget.textContent=openAll?&#x27;Collapse all / 全部收起&#x27;:&#x27;Expand all / 全部展开&#x27;;});
       root.querySelectorAll(&#x27;[data-open]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;setView(b.dataset.open)));
       root.querySelectorAll(&#x27;[data-power]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;{currentPower=b.dataset.power;root.querySelectorAll(&#x27;[data-power]&#x27;).forEach(x=&gt;x.setAttribute(&#x27;aria-pressed&#x27;,String(x===b)));render();}));
